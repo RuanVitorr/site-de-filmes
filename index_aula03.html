@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>RUAN VITOR DE LACERDA FERREIRA</title>
+  
+  
+</head>
+<script>
+  document.addEventListener('keydown', function(event) {
+    const focused = document.activeElement;
+
+    if (event.code === 'Space') {
+      // evita scroll
+      event.preventDefault();
+
+      // se for link ou botão, dispara ação
+      if (focused.tagName === 'A' || focused.tagName === 'BUTTON') {
+        focused.click();
+      }
+    }
+  });
+</script>
+<body>
+
+<header>
+  <h1>Pirate King of Movies</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Filmes</a></li>
+      <li><a href="#">Séries</a></li>
+      <li><a href="#">Notícias</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+
+  <div>
+  <form>
+    <label for="busca">Buscar:</label>
+    <input type="text" id="busca" name="busca" placeholder="Digite o nome do filme ou série">
+    <button type="submit">Pesquisar</button>
+  </form>
+  </div>
+
+  
+</header>
+
+<main>
+
+<section>
+  <h2>Filmes</h2>
+
+  <article>
+
+    <img src="media/img/homem-aranha.jpg">
+    <h3><a href="homem-aranha.html">Homem-Aranha</a></h3>
+    <p>Um jovem ganha poderes de aranha e passa a combater o crime na cidade de Nova York.</p>
+    <p><a href="homem-aranha.html">Ver mais</a></p>
+  </article>
+
+  <article>
+    <img src="media/img/batman.jpg">
+    <h3><a href="batman.html">Batman</a></h3>
+    <p>Bilionário de Gotham combate o crime usando tecnologia, inteligência e treinamento.</p>
+    <p><a href="batman.html">Ver mais</a></p>
+  </article>
+
+  <article>
+    <img src="media/img/superman.jpg">
+    <h3><a href="superman.html">Superman</a></h3>
+    <p>Herói vindo do planeta Krypton protege a Terra usando seus incríveis poderes.</p>
+    <p><a href="superman.html">Ver mais</a></p>
+  </article>
+
+  <article>
+    <img src="media/img/flash.jpg">
+    <h3><a href="flash.html">Flash</a></h3>
+    <p>Após um acidente, Barry Allen ganha super velocidade e se torna o herói Flash.</p>
+    <p><a href="flash.html">Ver mais</a></p>
+  </article>
+
+</section>
+
+<section>
+  <h2>Séries</h2>
+
+  <article>
+    <img src="media/img/supernatural.jpg">
+    <h3><a href="supernatural.html">Supernatural</a></h3>
+    <p>Dois irmãos viajam pelos Estados Unidos caçando demônios, fantasmas e criaturas sobrenaturais.</p>
+    <p><a href="supernatural.html">Ver mais</a></p>
+  </article>
+
+  <article>
+    <img src="media/img/got.jpg">
+    <h3><a href="got.html">Game of Thrones</a></h3>
+    <p>Diversas famílias nobres lutam pelo controle do Trono de Ferro em Westeros.</p>
+    <p><a href="got.html">Ver mais</a></p>
+  </article>
+
+  <article>
+    <img src="media/img/modern-family.jpg">
+    <h3><a href="modern-family.html">Modern Family</a></h3>
+    <p>Série de comédia que mostra o dia a dia de diferentes famílias de forma divertida.</p>
+    <p><a href="modern-family.html">Ver mais</a></p>
+  </article>
+
+  <article>
+    <img src="media/img/lucifer.jpg">
+    <h3><a href="lucifer.html">Lucifer</a></h3>
+    <p>O diabo decide tirar férias do inferno e passa a viver em Los Angeles ajudando a polícia.</p>
+    <p><a href="lucifer.html">Ver mais</a></p>
+  </article>
+
+</section>
+
+<section>
+  <h2>Notícias de Cinema</h2>
+
+  <article>
+    <h3>Novo filme do Batman é anunciado</h3>
+    <p>Produtora confirma que um novo filme do Batman está em desenvolvimento para os próximos anos.</p>
+    
+  </article>
+
+  <article>
+    <h3>Nova temporada de séries populares</h3>
+    <p>Algumas das séries mais assistidas do momento terão novas temporadas confirmadas.</p>
+    
+  </article>
+
+</section>
+
+</main>
+
+<aside>
+  <h3>Categorias</h3>
+
+  <ul>
+    <li><a href="#">Ação</a></li>
+    <li><a href="#">Aventura</a></li>
+    <li><a href="#">Ficção científica</a></li>
+    <li><a href="#">Drama</a></li>
+    <li><a href="#">Comédia</a></li>
+  </ul>
+
+</aside>
+
+<footer>
+  <p>&copy; 2026 Pirate King of Movies. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
