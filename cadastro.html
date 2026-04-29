@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+
+<body>
+
+<main>
+  <h1>Cadastro</h1>
+
+  <form>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required
+           pattern="[A-Za-zÀ-ÿ\s]{3,}"
+           title="Digite pelo menos 3 letras">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required
+           title="Digite um email válido">
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required
+           minlength="6"
+           title="A senha deve ter no mínimo 6 caracteres">
+
+    <button type="submit">Cadastrar</button>
+
+  </form>
+
+  <a href="index_aula03.html">Voltar</a>
+
+</main>
+
+</body>
+</html>

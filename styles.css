@@ -1,0 +1,225 @@
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0f;
+    color: #e5e7eb;
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* LINKS */
+a {
+    color: #c4b5fd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* HEADER - FLEXBOX */
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #11111a;
+    border-bottom: 1px solid #222;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: #ffffff;
+}
+
+/* MENU */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.4rem;
+}
+
+nav ul li a:hover {
+    background-color: #1a1a28;
+}
+
+/* FORMULÁRIO - FLEXBOX */
+.form-busca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-busca input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #333;
+    border-radius: 0.4rem;
+    background-color: #1a1a28;
+    color: #ffffff;
+}
+
+/* BOTÃO */
+button {
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: #8e24aa;
+    transform: scale(1.02);
+}
+
+/* LAYOUT GERAL - CSS GRID */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* SEÇÕES - CSS GRID */
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    margin: 0;
+    color: #c4b5fd;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+/* CARDS */
+article {
+    border: 1px solid #222;
+    padding: 1rem;
+    background-color: #15151f;
+    border-radius: 0.6rem;
+    transition: 0.2s ease;
+}
+
+article:hover {
+    transform: scale(1.02);
+    border-color: #6a1b9a;
+}
+
+article h3 {
+    margin: 0.5rem 0;
+}
+
+article p {
+    color: #d1d5db;
+    font-size: 0.95rem;
+}
+
+article img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* ASIDE */
+aside {
+    background-color: #15151f;
+    border: 1px solid #222;
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #c4b5fd;
+}
+
+aside ul {
+    padding-left: 1.2rem;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #11111a;
+    border-top: 1px solid #222;
+}
+
+/* ACESSIBILIDADE */
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid #c4b5fd;
+    outline-offset: 2px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .form-busca {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .form-busca input {
+        width: 18rem;
+    }
+
+    section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+    .layout {
+        grid-template-columns: 3fr 1fr;
+        align-items: start;
+    }
+
+    section {
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    }
+
+    aside {
+        position: sticky;
+        top: 1rem;
+    }
+}

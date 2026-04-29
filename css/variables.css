@@ -1,0 +1,38 @@
+:root {
+    /* Cores */
+    --color-primary: #6a1b9a;
+    --color-primary-hover: #8e24aa;
+    --color-link: #c4b5fd;
+
+    --color-bg-primary: #0b0b0f;
+    --color-bg-secondary: #11111a;
+    --color-bg-card: #15151f;
+    --color-bg-input: #1a1a28;
+
+    --color-text-primary: #e5e7eb;
+    --color-text-secondary: #d1d5db;
+    --color-text-light: #ffffff;
+
+    --color-border: #222222;
+    --color-border-input: #333333;
+
+    /* Tipografia */
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --font-sm: 0.95rem;
+    --font-base: 1rem;
+    --font-h1: clamp(1.5rem, 5vw, 2.5rem);
+    --font-h2: clamp(1.3rem, 3vw, 1.8rem);
+
+    --line-height-base: 1.5;
+
+    /* Espaçamentos */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+
+    /* Bordas */
+    --radius-sm: 0.4rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.6rem;
+}

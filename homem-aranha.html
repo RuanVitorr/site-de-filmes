@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Homem-Aranha</title>
+</head>
+
+<body>
+
+<script>
+  document.addEventListener('keydown', function(event) {
+    const focused = document.activeElement;
+
+    if (event.code === 'Space') {
+      // evita scroll
+      event.preventDefault();
+
+      // se for link ou botão, dispara ação
+      if (focused.tagName === 'A' || focused.tagName === 'BUTTON') {
+        focused.click();
+      }
+    }
+  });
+</script>
+
+
+<main>
+
+<video controls width="400">
+    <source src="media/videos/homem-aranha.mp4" type="video/mp4">
+    <source src="media/videos/homem-aranha.webm" type="video/webm">
+    <track 
+    src="media/legendas/homem-aranha.vtt"
+    kind="subtitles"
+    srclang="pt"
+    label="Português"
+    default
+    >
+
+  <p>Seu navegador não suporta vídeo. 
+    <a href="media/videos/homem-aranha.mp4">Clique aqui para baixar o vídeo</a>.</p>
+
+</video>
+
+  <h1>Homem-Aranha</h1>
+
+  <p>Detalhes do filme aqui...</p>
+
+  <a href="index_aula03.html">Voltar</a>
+</main>
+
+</body>
+</html>
