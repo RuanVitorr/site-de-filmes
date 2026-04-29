@@ -1,0 +1,6 @@
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid var(--color-link);
+    outline-offset: 2px;
+}
