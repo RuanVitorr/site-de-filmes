@@ -1,18 +1,20 @@
-body {
-    min-height: 100vh;
-    font-family: var(--font-body);
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
-    font-size: var(--font-base);
-    line-height: var(--line-height-base);
-    overflow-x: hidden;
-}
+@layer base {
+    body {
+        min-height: 100vh;
+        font-family: var(--font-body);
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        font-size: var(--font-base);
+        line-height: var(--line-height-base);
+        overflow-x: hidden;
+    }
 
-a {
-    color: var(--color-link);
-    text-decoration: none;
-}
+    a {
+        color: var(--color-link);
+        text-decoration: none;
+    }
 
-a:hover {
-    color: var(--color-text-light);
+    a:hover {
+        color: var(--color-text-light);
+    }
 }

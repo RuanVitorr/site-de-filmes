@@ -1,3 +1,21 @@
+/* ==================================================
+   DESIGN TOKENS — PIRATE KING OF MOVIES
+
+   Convenção adotada:
+   - Tokens semânticos para cores, tipografia,
+     espaçamentos, bordas e sombras.
+   - Organização baseada em ITCSS.
+   - Nomenclatura seguindo padrão:
+     category-property-scale/state.
+
+   Exemplos:
+   --color-primary-500
+   --font-base
+   --space-md
+   --radius-lg
+
+================================================== */
+
 :root {
     /* =========================
        CORES - PALETA SEMÂNTICA
