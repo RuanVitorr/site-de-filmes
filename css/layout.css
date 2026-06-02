@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @layer layout {
+=======
+@layer layout{
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     .layout {
         display: grid;
         grid-template-columns: 1fr;
@@ -7,6 +11,10 @@
         margin: 0 auto;
         padding: var(--space-md);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     section {
         display: grid;
         grid-template-columns: 1fr;
@@ -16,34 +24,68 @@
     section h2 {
         color: var(--color-link);
         font-size: var(--font-h2);
+<<<<<<< HEAD
         grid-column: 1 / -1;
     }
+=======
+    }
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     aside {
         background-color: var(--color-bg-card);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-lg);
         padding: var(--space-md);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     aside h3 {
         color: var(--color-link);
         margin-bottom: var(--space-sm);
     }
+<<<<<<< HEAD
     aside ul {
         padding-left: 1.2rem;
     }
+=======
+
+    aside ul {
+        padding-left: 1.2rem;
+    }
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     @media (min-width: 768px) {
         section {
             grid-template-columns: repeat(2, 1fr);
         }
+<<<<<<< HEAD
     }
+=======
+
+        section h2 {
+            grid-column: 1 / -1;
+        }
+    }
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     @media (min-width: 1024px) {
         .layout {
             grid-template-columns: 3fr 1fr;
             align-items: start;
         }
+<<<<<<< HEAD
         section {
             grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
         }
+=======
+
+        section {
+            grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+        }
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
         aside {
             position: sticky;
             top: 1rem;
