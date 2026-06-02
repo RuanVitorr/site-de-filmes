@@ -4,18 +4,12 @@
     *::after {
         box-sizing: border-box;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     * {
         margin: 0;
         padding: 0;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     img,
     picture,
     video,
@@ -24,20 +18,14 @@
         display: block;
         max-width: 100%;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     input,
     button,
     textarea,
     select {
         font: inherit;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     p,
     h1,
     h2,
@@ -47,10 +35,7 @@
     h6 {
         overflow-wrap: break-word;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     @media (prefers-reduced-motion: reduce) {
         *,
         *::before,

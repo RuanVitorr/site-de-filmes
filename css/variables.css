@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 /* 
    DESIGN TOKENS — PIRATE KING OF MOVIES
    Convenção: category-property-scale/state
    Ex.: --color-primary-500, --font-base, --space-md
  */
-=======
 /* ==================================================
    DESIGN TOKENS — PIRATE KING OF MOVIES
 
@@ -23,15 +21,11 @@
 
 ================================================== */
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
 :root {
     /* =========================
        CORES - PALETA SEMÂNTICA
     ========================= */
-<<<<<<< HEAD
-=======
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     /* Primária */
     --color-primary-100: #ebf3fb;
     --color-primary-300: #9fc5e8;
@@ -71,7 +65,6 @@
     --color-border-input: #333333;
     --color-border-focus: var(--color-primary-500);
 
-<<<<<<< HEAD
     /* Estados de foco e hover */
     --focus-outline-color: var(--color-primary-500);
     --focus-outline-width: 3px;
@@ -84,7 +77,6 @@
     ========================= */
     --font-heading: "Poppins", Arial, Helvetica, sans-serif;
     --font-body: "Inter", Arial, Helvetica, sans-serif;
-=======
     /* =========================
        TIPOGRAFIA
     ========================= */
@@ -92,7 +84,6 @@
     --font-heading: "Poppins", Arial, Helvetica, sans-serif;
     --font-body: "Inter", Arial, Helvetica, sans-serif;
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     --font-xs: 0.64rem;
     --font-sm: 0.8rem;
     --font-base: 1rem;
@@ -101,47 +92,37 @@
     --font-xl: 1.95rem;
     --font-2xl: 2.44rem;
     --font-3xl: 3.05rem;
-<<<<<<< HEAD
     --font-h1: clamp(1.5rem, 5vw, var(--font-2xl));
     --font-h2: clamp(1.3rem, 3vw, var(--font-xl));
-=======
 
     --font-h1: clamp(1.5rem, 5vw, var(--font-2xl));
     --font-h2: clamp(1.3rem, 3vw, var(--font-xl));
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     --line-height-base: 1.5;
 
     /* =========================
        ESPAÇAMENTOS
     ========================= */
-<<<<<<< HEAD
-=======
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 2rem;
     --space-xl: 3rem;
     --space-2xl: 4rem;
-<<<<<<< HEAD
-
-    /* =========================
-       BORDAS E SOMBRAS
-    ========================= */
-=======
 
     /* =========================
        BORDAS E SOMBRAS
     ========================= */
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
+    /* =========================
+       BORDAS E SOMBRAS
+    ========================= */
+
     --radius-sm: 0.4rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.6rem;
     --radius-xl: 1rem;
-<<<<<<< HEAD
     --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
@@ -170,9 +151,7 @@
     --animation-duration-normal: 0.3s;
     --animation-duration-slow: 0.5s;
     --animation-easing: ease-in-out;
-=======
 
     --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
 }

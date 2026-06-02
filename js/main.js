@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Pirate King of Movies - Main JavaScript
  * Versão: 1.0
@@ -176,7 +175,6 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
-=======
 const menuButton = document.querySelector(".navbar__toggle");
 const menu = document.querySelector(".navbar__menu");
 
@@ -192,5 +190,4 @@ if (menuButton && menu) {
 
     });
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
 }

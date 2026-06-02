@@ -1,5 +1,4 @@
 @layer utilities {
-<<<<<<< HEAD
     .u-sr-only {
         position: absolute;
         width: 1px;
@@ -35,7 +34,6 @@
     .u-flex-col { flex-direction: column; }
     .u-gap-sm { gap: var(--space-sm); }
     .u-gap-md { gap: var(--space-md); }
-=======
 
     .u-sr-only {
         position: absolute;
@@ -67,5 +65,4 @@
         border-radius: var(--radius-sm);
     }
 
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
 }
