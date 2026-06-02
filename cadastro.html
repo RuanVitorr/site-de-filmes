@@ -3,40 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="styles.css">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/btn.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <title>Cadastro - 🎬 Pirate King of Movies</title>
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 3rem auto 2rem;
+      padding: 2rem;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: 0.6rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--color-gray-900);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid var(--color-gray-300);
+      border-radius: 0.4rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--color-primary-500);
+      box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.1);
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 
 <body>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="header__logo">🎬 Pirate King</a>
+    <nav class="nav">
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="index.html#filmes" class="nav__link">Filmes</a></li>
+        <li><a href="index.html#series" class="nav__link">Séries</a></li>
+        <li><a href="cadastro.html" class="nav__link">Cadastro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<main>
-  <h1>Cadastro</h1>
+<main class="main">
+  <div class="form-container">
+    <h1 style="text-align: center; margin-bottom: 2rem; color: var(--color-gray-900);">📝 Cadastro</h1>
 
-  <form>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome Completo</label>
+        <input 
+          type="text" 
+          id="nome" 
+          name="nome" 
+          required
+          pattern="[A-Za-zÀ-ÿ\s]{3,}"
+          title="Digite pelo menos 3 letras"
+          placeholder="João Silva"
+        >
+      </div>
 
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required
-           pattern="[A-Za-zÀ-ÿ\s]{3,}"
-           title="Digite pelo menos 3 letras">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required
+          title="Digite um email válido"
+          placeholder="seu.email@exemplo.com"
+        >
+      </div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required
-           title="Digite um email válido">
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input 
+          type="password" 
+          id="senha" 
+          name="senha" 
+          required
+          minlength="6"
+          title="A senha deve ter no mínimo 6 caracteres"
+          placeholder="••••••"
+        >
+      </div>
 
-    <label for="senha">Senha:</label>
-    <input type="password" id="senha" name="senha" required
-           minlength="6"
-           title="A senha deve ter no mínimo 6 caracteres">
+      <div class="form-group">
+        <label for="confirmaSenha">Confirmar Senha</label>
+        <input 
+          type="password" 
+          id="confirmaSenha" 
+          name="confirmaSenha" 
+          required
+          minlength="6"
+          title="Confirme sua senha"
+          placeholder="••••••"
+        >
+      </div>
 
-    <button type="submit">Cadastrar</button>
-
-  </form>
-
-  <a href="index_aula03.html">Voltar</a>
-
+      <div class="form-actions">
+        <button type="submit" class="btn btn--primary">Cadastrar</button>
+        <a href="index.html" class="btn btn--outline">Cancelar</a>
+      </div>
+    </form>
+  </div>
 </main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__section">
+        <h3 class="footer__title">Sobre</h3>
+        <p>🎬 Pirate King of Movies - Sua plataforma de filmes e séries favoritas com legendas em português.</p>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">Links Rápidos</h3>
+        <ul class="footer__list">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="index.html#filmes" class="footer__link">Filmes</a></li>
+          <li><a href="index.html#series" class="footer__link">Séries</a></li>
+          <li><a href="cadastro.html" class="footer__link">Cadastro</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">Contato</h3>
+        <p>Email: contato@piratekingofmovies.com</p>
+        <p>Suporte: (11) 9999-9999</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; {{year}} Pirate King of Movies. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
 
 </body>
 </html>

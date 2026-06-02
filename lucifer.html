@@ -1,30 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Lucifer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/btn.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <title>Lucifer - 🎬 Pirate King of Movies</title>
 </head>
 
 <body>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="header__logo">🎬 Pirate King</a>
+    <nav class="nav">
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="index.html#filmes" class="nav__link">Filmes</a></li>
+        <li><a href="index.html#series" class="nav__link">Séries</a></li>
+        <li><a href="cadastro.html" class="nav__link">Cadastro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
+<main class="main" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+  <h1 style="margin-bottom: 1.5rem; font-size: 2rem;">😈 Lucifer</h1>
+  
+  <video controls style="width: 100%; max-width: 100%; margin-bottom: 2rem; border-radius: 0.6rem;">
+    <source src="media/videos/lucifer.mp4" type="video/mp4">
+    <source src="media/videos/lucifer.webm" type="video/webm">
+    <track 
+      src="media/legendas/lucifer.vtt"
+      kind="subtitles"
+      srclang="pt"
+      label="Português"
+      default
+    >
+    <p>Seu navegador não suporta vídeo. <a href="media/videos/lucifer.mp4">Clique aqui para baixar o vídeo</a>.</p>
+  </video>
 
-<script>
-  document.addEventListener('keydown', function(event) {
-    const focused = document.activeElement;
+  <section style="background-color: var(--color-gray-50); padding: 2rem; border-radius: 0.6rem; margin-bottom: 2rem;">
+    <h2 style="color: var(--color-primary-500); margin-bottom: 1rem;">Sobre a Série</h2>
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-gray-700); margin-bottom: 1rem;">
+      Lucifer Morningstar, o próprio diabo, decide tirar férias do inferno e se muda para Los Angeles, onde abre um nightclub e se vê envolvido em investigações policiais.
+    </p>
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-gray-700);">
+      Essa série combina drama, comédia e ação, seguindo as aventuras de Lucifer enquanto ele redescobre a humanidade e forma amizades inesperadas com detectives e anjos.
+    </p>
+  </section>
 
-    if (event.code === 'Space') {
-      // evita scroll
-      event.preventDefault();
+  <div style="text-align: center;">
+    <a href="index.html" class="btn btn--primary">← Voltar para Home</a>
+  </div>
+</main>
 
-      // se for link ou botão, dispara ação
-      if (focused.tagName === 'A' || focused.tagName === 'BUTTON') {
-        focused.click();
-      }
-    }
-  });
-</script>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__section">
+        <h3 class="footer__title">Sobre</h3>
+        <p>🎬 Pirate King of Movies - Sua plataforma de filmes e séries favoritas com legendas em português.</p>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">Links Rápidos</h3>
+        <ul class="footer__list">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="index.html#filmes" class="footer__link">Filmes</a></li>
+          <li><a href="index.html#series" class="footer__link">Séries</a></li>
+          <li><a href="cadastro.html" class="footer__link">Cadastro</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">Contato</h3>
+        <p>Email: contato@piratekingofmovies.com</p>
+        <p>Suporte: (11) 9999-9999</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; {{year}} Pirate King of Movies. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
 
 
 <main>

@@ -1,0 +1,77 @@
+@layer components {
+    .video-player {
+        position: relative;
+        width: 100%;
+        background: var(--video-background);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+    }
+    .video-player__container {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+    .video-player__container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .video-player__controls {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity var(--animation-duration-normal);
+    }
+    .video-player:hover .video-player__controls,
+    .video-player:focus-within .video-player__controls {
+        opacity: 1;
+    }
+    .video-player__progress {
+        flex: 1;
+        height: var(--video-progress-height);
+        background: var(--color-bg-input);
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        position: relative;
+    }
+    .video-player__progress::-webkit-progress-bar {
+        background: var(--color-bg-input);
+        border-radius: var(--radius-sm);
+    }
+    .video-player__progress::-webkit-progress-value {
+        background: var(--video-progress-color);
+        border-radius: var(--radius-sm);
+    }
+    .video-player__volume {
+        width: 6rem;
+    }
+    .video-player__fullscreen {
+        background: none;
+        border: none;
+        color: var(--color-text-light);
+        cursor: pointer;
+        font-size: var(--font-lg);
+    }
+    .video-player__btn {
+        background: none;
+        border: none;
+        color: var(--color-text-light);
+        cursor: pointer;
+        padding: 0.3rem;
+        font-size: var(--font-base);
+        border-radius: var(--radius-sm);
+    }
+    .video-player__btn:focus-visible {
+        outline: var(--focus-outline-width) solid var(--focus-outline-color);
+        outline-offset: var(--focus-outline-offset);
+    }
+}

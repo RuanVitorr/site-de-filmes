@@ -3,151 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pirate King of Movies - Catálogo de filmes e séries com legendas em português.">
+  <meta name="theme-color" content="#6a1b9a">
+  <meta property="og:title" content="🎬 Pirate King of Movies">
+  <meta property="og:description" content="Catálogo de filmes e séries com legendas em português">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/btn.css">
   <link rel="stylesheet" href="css/utilities.css">
-  <title>RUAN VITOR DE LACERDA FERREIRA</title>
+  <title>🎬 Pirate King of Movies - Filmes e Séries Online</title>
 </head>
-
 <body>
-
-<header class="cabecalho">
-  <h1>Pirate King of Movies</h1>
-
-  <nav>
-    <ul>
-      <li><a href="cadastro.html">Cadastro</a></li>
-    </ul>
-  </nav>
-
-  <form class="form-busca">
-    <label for="busca">Buscar:</label>
-    <input type="text" id="busca" name="busca" placeholder="Digite o nome do filme ou série">
-    <button type="submit">Pesquisar</button>
-  </form>
-</header>
-
-<div class="layout">
-
-  <main>
-
-    <section>
-      <h2>Filmes</h2>
-
-      <article>
-        <img src="media/img/homem-aranha.jpg" alt="Imagem do Homem-Aranha">
-        <h3><a href="homem-aranha.html">Homem-Aranha</a></h3>
-        <p>Um jovem ganha poderes de aranha e passa a combater o crime na cidade de Nova York.</p>
-        <p><a href="homem-aranha.html">Ver mais</a></p>
-      </article>
-
-      <article>
-        <img src="media/img/batman.jpg" alt="Imagem do Batman">
-        <h3><a href="batman.html">Batman</a></h3>
-        <p>Bilionário de Gotham combate o crime usando tecnologia, inteligência e treinamento.</p>
-        <p><a href="batman.html">Ver mais</a></p>
-      </article>
-
-      <article>
-        <img src="media/img/superman.jpg" alt="Imagem do Superman">
-        <h3><a href="superman.html">Superman</a></h3>
-        <p>Herói vindo do planeta Krypton protege a Terra usando seus incríveis poderes.</p>
-        <p><a href="superman.html">Ver mais</a></p>
-      </article>
-
-      <article>
-        <img src="media/img/flash.jpg" alt="Imagem do Flash">
-        <h3><a href="flash.html">Flash</a></h3>
-        <p>Após um acidente, Barry Allen ganha super velocidade e se torna o herói Flash.</p>
-        <p><a href="flash.html">Ver mais</a></p>
-      </article>
+  <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+  <header class="navbar" role="banner">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Pirate King of Movies - Home">🎬 Pirate King</a>
+      <button class="navbar__toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navbar-menu">☰</button>
+      <nav class="navbar__menu" id="navbar-menu" role="navigation" aria-label="Navegação principal">
+        <ul class="navbar__list">
+          <li><a href="index.html" class="navbar__link active">Home</a></li>
+          <li><a href="#filmes" class="navbar__link">Filmes</a></li>
+          <li><a href="#series" class="navbar__link">Séries</a></li>
+          <li><a href="cadastro.html" class="navbar__link">Cadastro</a></li>
+        </ul>
+      </nav>
+      <div class="navbar__search">
+        <label for="search-input" class="sr-only">Buscar filmes e séries</label>
+        <input type="search" id="search-input" class="search-input" placeholder="Buscar filmes..." aria-label="Buscar filmes e séries">
+      </div>
+    </div>
+  </header>
+  <main id="main-content" class="layout">
+    <section id="filmes" aria-label="Filmes">
+      <h2>🎬 Filmes</h2>
+      <div class="cards-grid" role="list">
+        <article class="card" role="listitem">
+          <img src="media/img/batman.jpg" alt="Pôster do filme Batman" class="card__image" loading="lazy">
+          <h3 class="card__title">Batman</h3>
+          <p class="card__text">Bilionário de Gotham combate o crime usando tecnologia, inteligência e treinamento.</p>
+          <a href="batman.html" class="btn btn--primary">Ver mais</a>
+        </article>
+        <article class="card" role="listitem">
+          <img src="media/img/superman.jpg" alt="Pôster do filme Superman" class="card__image" loading="lazy">
+          <h3 class="card__title">Superman</h3>
+          <p class="card__text">Herói vindo do planeta Krypton protege a Terra usando seus incríveis poderes.</p>
+          <a href="superman.html" class="btn btn--primary">Ver mais</a>
+        </article>
+        <article class="card" role="listitem">
+          <img src="media/img/flash.jpg" alt="Pôster do filme Flash" class="card__image" loading="lazy">
+          <h3 class="card__title">Flash</h3>
+          <p class="card__text">Após um acidente, Barry Allen ganha super velocidade e se torna o herói Flash.</p>
+          <a href="flash.html" class="btn btn--primary">Ver mais</a>
+        </article>
+        <article class="card" role="listitem">
+          <img src="media/img/homem-aranha.jpg" alt="Pôster do filme Homem-Aranha" class="card__image" loading="lazy">
+          <h3 class="card__title">Homem-Aranha</h3>
+          <p class="card__text">Um jovem com poderes de aranha combate o crime e protege sua cidade.</p>
+          <a href="homem-aranha.html" class="btn btn--primary">Ver mais</a>
+        </article>
+      </div>
     </section>
-
-    <section>
-      <h2>Séries</h2>
-
-      <article>
-        <img src="media/img/supernatural.jpg" alt="Imagem da série Supernatural">
-        <h3><a href="supernatural.html">Supernatural</a></h3>
-        <p>Dois irmãos viajam pelos Estados Unidos caçando demônios, fantasmas e criaturas sobrenaturais.</p>
-        <p><a href="supernatural.html">Ver mais</a></p>
-      </article>
-
-      <article>
-        <img src="media/img/got.jpg" alt="Imagem da série Game of Thrones">
-        <h3><a href="got.html">Game of Thrones</a></h3>
-        <p>Diversas famílias nobres lutam pelo controle do Trono de Ferro em Westeros.</p>
-        <p><a href="got.html">Ver mais</a></p>
-      </article>
-
-      <article>
-        <img src="media/img/modern-family.jpg" alt="Imagem da série Modern Family">
-        <h3><a href="modern-family.html">Modern Family</a></h3>
-        <p>Série de comédia que mostra o dia a dia de diferentes famílias de forma divertida.</p>
-        <p><a href="modern-family.html">Ver mais</a></p>
-      </article>
-
-      <article>
-        <img src="media/img/lucifer.jpg" alt="Imagem da série Lucifer">
-        <h3><a href="lucifer.html">Lucifer</a></h3>
-        <p>O diabo decide tirar férias do inferno e passa a viver em Los Angeles ajudando a polícia.</p>
-        <p><a href="lucifer.html">Ver mais</a></p>
-      </article>
+    <section id="series" aria-label="Séries">
+      <h2>📺 Séries</h2>
+      <div class="cards-grid" role="list">
+        <article class="card" role="listitem">
+          <img src="media/img/supernatural.jpg" alt="Pôster da série Supernatural" class="card__image" loading="lazy">
+          <h3 class="card__title">Supernatural</h3>
+          <p class="card__text">Dois irmãos viajam pelos Estados Unidos caçando demônios, fantasmas e criaturas sobrenaturais.</p>
+          <a href="supernatural.html" class="btn btn--primary">Ver mais</a>
+        </article>
+        <article class="card" role="listitem">
+          <img src="media/img/got.jpg" alt="Pôster da série Game of Thrones" class="card__image" loading="lazy">
+          <h3 class="card__title">Game of Thrones</h3>
+          <p class="card__text">Diversas famílias nobres lutam pelo controle do Trono de Ferro em Westeros.</p>
+          <a href="got.html" class="btn btn--primary">Ver mais</a>
+        </article>
+        <article class="card" role="listitem">
+          <img src="media/img/modern-family.jpg" alt="Pôster da série Modern Family" class="card__image" loading="lazy">
+          <h3 class="card__title">Modern Family</h3>
+          <p class="card__text">Série de comédia que mostra o dia a dia de diferentes famílias de forma divertida.</p>
+          <a href="modern-family.html" class="btn btn--primary">Ver mais</a>
+        </article>
+        <article class="card" role="listitem">
+          <img src="media/img/lucifer.jpg" alt="Pôster da série Lucifer" class="card__image" loading="lazy">
+          <h3 class="card__title">Lucifer</h3>
+          <p class="card__text">O diabo decide tirar férias do inferno e passa a viver em Los Angeles ajudando a polícia.</p>
+          <a href="lucifer.html" class="btn btn--primary">Ver mais</a>
+        </article>
+      </div>
     </section>
-
-    <section>
-      <h2>Notícias de Cinema</h2>
-
-      <article>
-        <h3>Novo filme do Batman é anunciado</h3>
-        <p>Produtora confirma que um novo filme do Batman está em desenvolvimento para os próximos anos.</p>
-      </article>
-
-      <article>
-        <h3>Nova temporada de séries populares</h3>
-        <p>Algumas das séries mais assistidas do momento terão novas temporadas confirmadas.</p>
-      </article>
-    </section>
-
+    <aside class="sidebar" role="complementary" aria-label="Categorias">
+      <h3>Categorias</h3>
+      <nav aria-label="Categorias de filmes">
+        <ul>
+          <li><a href="#acao">Ação</a></li>
+          <li><a href="#aventura">Aventura</a></li>
+          <li><a href="#ficcao-cientifica">Ficção científica</a></li>
+          <li><a href="#drama">Drama</a></li>
+          <li><a href="#comedia">Comédia</a></li>
+        </ul>
+      </nav>
+    </aside>
   </main>
-
-  <aside>
-    <h3>Categorias</h3>
-
-    <ul>
-      <li><a href="#">Ação</a></li>
-      <li><a href="#">Aventura</a></li>
-      <li><a href="#">Ficção científica</a></li>
-      <li><a href="#">Drama</a></li>
-      <li><a href="#">Comédia</a></li>
-    </ul>
-  </aside>
-
-</div>
-
-<footer>
-  <p>&copy; 2026 Pirate King of Movies. Todos os direitos reservados.</p>
-</footer>
-
-<script>
-  document.addEventListener('keydown', function(event) {
-    const focused = document.activeElement;
-
-    if (event.code === 'Space') {
-      event.preventDefault();
-
-      if (focused.tagName === 'A' || focused.tagName === 'BUTTON') {
-        focused.click();
-      }
-    }
-  });
-</script>
-
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__section">
+        <h3 class="footer__title">Sobre</h3>
+        <p>🎬 Pirate King of Movies - Sua plataforma de filmes e séries favoritas com legendas em português.</p>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">Links Rápidos</h3>
+        <ul class="footer__list">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="#filmes" class="footer__link">Filmes</a></li>
+          <li><a href="#series" class="footer__link">Séries</a></li>
+          <li><a href="cadastro.html" class="footer__link">Cadastro</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">Contato</h3>
+        <p>Email: <a href="mailto:contato@piratekingofmovies.com">contato@piratekingofmovies.com</a></p>
+        <p>Suporte: <a href="tel:+5511999999999">(11) 9999-9999</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; <span id="year"></span> Pirate King of Movies. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

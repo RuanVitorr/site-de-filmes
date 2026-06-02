@@ -1,0 +1,50 @@
+@layer components {
+    .filter-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        padding: var(--space-md) 0;
+    }
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    .filter-label {
+        font-size: var(--font-sm);
+        color: var(--color-text-secondary);
+        font-weight: 600;
+    }
+    .filter-checkbox {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        cursor: pointer;
+    }
+    .filter-checkbox input[type="checkbox"] {
+        width: 1.2rem;
+        height: 1.2rem;
+        accent-color: var(--color-brand);
+    }
+    .filter-active {
+        background-color: var(--filter-active-bg);
+        color: var(--filter-active-color);
+        border-radius: var(--radius-sm);
+        padding: 0.2rem 0.5rem;
+        font-size: var(--font-xs);
+    }
+    .filter-button {
+        padding: 0.4rem 0.8rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: var(--color-bg-input);
+        color: var(--color-text-secondary);
+        cursor: pointer;
+        transition: all var(--animation-duration-fast);
+    }
+    .filter-button.active {
+        background: var(--color-brand);
+        color: var(--color-text-light);
+        border-color: var(--color-brand);
+    }
+}

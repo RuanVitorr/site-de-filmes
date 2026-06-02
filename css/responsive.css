@@ -1,0 +1,28 @@
+@layer utilities {
+    /* Mobile first – estilos base já são mobile */
+
+    /* Tablet (≥768px) */
+    @media (min-width: 768px) {
+        .mobile-only { display: none; }
+        .tablet-only { display: block; }
+    }
+
+    /* Desktop (≥1024px) */
+    @media (min-width: 1024px) {
+        .tablet-only { display: none; }
+        .desktop-only { display: block; }
+        .layout {
+            grid-template-columns: 3fr 1fr;
+        }
+    }
+
+    /* Large desktop (≥1440px) */
+    @media (min-width: 1440px) {
+        .layout {
+            width: min(100%, 1400px);
+        }
+        .card__image {
+            height: 22rem;
+        }
+    }
+}
