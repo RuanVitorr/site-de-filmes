@@ -8,10 +8,15 @@
         line-height: var(--line-height-base);
         overflow-x: hidden;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     a {
         color: var(--color-link);
         text-decoration: none;
     }
+<<<<<<< HEAD
     a:hover {
         color: var(--color-text-light);
     }
@@ -46,4 +51,10 @@
         outline: var(--focus-outline-width) solid var(--focus-outline-color);
         outline-offset: var(--focus-outline-offset);
     }
+=======
+
+    a:hover {
+        color: var(--color-text-light);
+    }
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
 }

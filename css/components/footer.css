@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @layer components {
     .footer {
         margin-top: var(--space-2xl);
@@ -41,5 +42,68 @@
         .footer__grid {
             grid-template-columns: repeat(3, 1fr);
         }
+=======
+@layer components{
+    .footer {
+        margin-top: var(--space-2xl);
+
+        padding: var(--space-xl) var(--space-md);
+
+        background-color: var(--color-bg-secondary);
+
+        border-top: 1px solid var(--color-border);
+    }
+
+    .footer__grid {
+        width: min(100%, 1200px);
+
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: var(--space-xl);
+    }
+
+    .footer__title {
+        margin-bottom: var(--space-sm);
+
+        font-family: var(--font-heading);
+
+        font-size: var(--font-md);
+
+        color: var(--color-text-light);
+    }
+
+    .footer__list {
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: var(--space-sm);
+    }
+
+    .footer__copy {
+        margin-top: var(--space-xl);
+
+        text-align: center;
+
+        color: var(--color-text-secondary);
+
+        font-size: var(--font-sm);
+    }
+
+    /* =========================
+    TABLET E DESKTOP
+    ========================= */
+
+    @media (min-width: 768px) {
+
+        .footer__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     }
 }

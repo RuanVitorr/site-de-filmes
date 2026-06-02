@@ -1,22 +1,39 @@
+<<<<<<< HEAD
 @layer components {
+=======
+@layer components{   
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     .navbar {
         background-color: var(--color-bg-secondary);
         border-bottom: 1px solid var(--color-border);
         padding: var(--space-md);
     }
+<<<<<<< HEAD
     .navbar__container {
         width: min(100%, 1200px);
         margin: 0 auto;
+=======
+
+    .navbar__container {
+        width: min(100%, 1200px);
+        margin: 0 auto;
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
         display: flex;
         flex-direction: column;
         gap: var(--space-md);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     .navbar__logo {
         font-family: var(--font-heading);
         font-size: var(--font-h1);
         font-weight: 700;
         color: var(--color-text-light);
     }
+<<<<<<< HEAD
     .navbar__toggle {
         display: block;
         background: none;
@@ -57,11 +74,59 @@
         background-color: var(--color-brand);
         color: var(--color-text-light);
     }
+=======
+
+    .navbar__toggle {
+        display: block;
+
+        background: none;
+        border: none;
+
+        color: var(--color-text-light);
+
+        font-size: var(--font-xl);
+
+        cursor: pointer;
+    }
+
+    .navbar__menu {
+        display: none;
+    }
+
+    .navbar__menu.active {
+        display: block;
+    }
+
+    .navbar__list {
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: var(--space-sm);
+    }
+
+    .navbar__link {
+        display: block;
+
+        padding: 0.7rem;
+
+        border-radius: var(--radius-sm);
+
+        font-weight: 500;
+    }
+
+    .navbar__link:hover {
+        background-color: var(--color-bg-input);
+    }
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     .navbar__search {
         display: flex;
         flex-direction: column;
         gap: var(--space-sm);
     }
+<<<<<<< HEAD
     .navbar__search input {
         width: 100%;
         padding: 0.7rem;
@@ -76,27 +141,70 @@
         outline: none;
     }
     @media (min-width: 768px) {
+=======
+
+    .navbar__search input {
+        width: 100%;
+
+        padding: 0.7rem;
+
+        border: 1px solid var(--color-border-input);
+
+        border-radius: var(--radius-sm);
+
+        background-color: var(--color-bg-input);
+
+        color: var(--color-text-light);
+    }
+
+    /* =========================
+    TABLET E DESKTOP
+    ========================= */
+
+    @media (min-width: 768px) {
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
         .navbar__container {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
         }
+<<<<<<< HEAD
         .navbar__toggle {
             display: none;
         }
         .navbar__menu {
             display: block;
         }
+=======
+
+        .navbar__toggle {
+            display: none;
+        }
+
+        .navbar__menu {
+            display: block;
+        }
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
         .navbar__list {
             flex-direction: row;
             align-items: center;
             gap: var(--space-md);
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
         .navbar__search {
             flex-direction: row;
             align-items: center;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
         .navbar__search input {
             width: 18rem;
         }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @layer components {
     .btn {
         display: inline-block;
@@ -48,5 +49,31 @@
     .btn--large {
         padding: 1rem 1.8rem;
         font-size: var(--font-md);
+=======
+@layer components{
+    .btn {
+        display: inline-block;
+
+        padding: 0.7rem 1rem;
+
+        background-color: var(--color-brand);
+        color: var(--color-text-light);
+
+        border: none;
+        border-radius: var(--radius-sm);
+
+        font-weight: 700;
+        text-align: center;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .btn:hover {
+        background-color: var(--color-brand-hover);
+        color: var(--color-text-light);
+        transform: scale(1.02);
+>>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
     }
 }
