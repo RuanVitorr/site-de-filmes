@@ -12,13 +12,11 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components/navbar.css">
   <link rel="stylesheet" href="css/components/btn.css">
-  <link rel="stylesheet" href="css/components/hero.css">
-  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/form.css">
+  <link rel="stylesheet" href="css/components/video-player.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/utilities.css">
-  <link rel="stylesheet" href="css/components/video-player.css">
-
-  <title>Supernatural - Pirate King of Movies</title>
+  <title>Login - Pirate King of Movies</title>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Pular para conteudo principal</a>
@@ -34,39 +32,33 @@
           <li><a href="index.html#filmes" class="navbar__link">Filmes</a></li>
           <li><a href="index.html#series" class="navbar__link">Series</a></li>
           <li><a href="cadastro.html" class="navbar__link">Cadastro</a></li>
-          <li><a href="login.html" class="navbar__link" data-auth-link>Login</a></li>
+          <li><a href="login.html" class="navbar__link active" data-auth-link>Login</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main id="main-content" class="detail-page">
-    <section class="detail-hero" aria-labelledby="detail-title">
-      <img class="detail-hero__poster" src="media/img/supernatural.jpg" alt="Poster de Supernatural">
-      <div>
-        <p class="detail-hero__eyebrow">Serie</p>
-        <h1 id="detail-title" class="detail-hero__title">Supernatural</h1>
-        <p class="detail-hero__text">Dois irmaos cruzam os Estados Unidos investigando casos sobrenaturais e enfrentando forcas sombrias.</p>
-      </div>
+    <section class="detail-card" style="max-width: 42rem; margin-inline: auto;">
+      <h1 class="detail-hero__title">Login</h1>
+      <form class="form" id="login-form" novalidate>
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" id="email" name="email" required title="Digite um email valido" placeholder="seu.email@exemplo.com">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="senha">Senha</label>
+          <input class="form__input" type="password" id="senha" name="senha" required minlength="6" title="A senha deve ter no minimo 6 caracteres" placeholder="Digite sua senha">
+        </div>
+        <div class="detail-actions">
+          <button type="submit" class="btn btn--primary">Entrar</button>
+          <a href="cadastro.html" class="btn btn--outline">Criar conta</a>
+        </div>
+        <p class="form__message" id="login-mensagem" role="status" aria-live="polite"></p>
+      </form>
     </section>
-
-    <section class="video-player" aria-label="Video de Supernatural">
-      <video controls preload="metadata" poster="media/img/supernatural.jpg">
-        <source src="media/videos/supernatural.mp4" type="video/mp4">
-        <track src="media/legendas/supernatural.vtt" kind="subtitles" srclang="pt" label="Portugues" default>
-        <p>Seu navegador nao suporta video. <a href="media/videos/supernatural.mp4">Baixar video</a>.</p>
-      </video>
-    </section>
-
-    <section class="detail-card">
-      <h2>Sobre a serie</h2>
-      <p>Supernatural acompanha os irmaos Winchester em uma jornada por estradas, lendas urbanas e ameacas sobrenaturais.</p>
-      <p>A serie mistura acao, suspense e drama familiar enquanto os personagens enfrentam demonios, fantasmas e escolhas dificeis.</p>
-    </section>
-
-    <div class="detail-actions">
-      <a href="index.html" class="btn btn--outline">Voltar para Home</a>
-    </div>
   </main>
+
   <footer class="footer">
     <div class="footer__grid">
       <div>
@@ -94,7 +86,4 @@
   <script src="js/main.js" defer></script>
 </body>
 </html>
-
-
-
 

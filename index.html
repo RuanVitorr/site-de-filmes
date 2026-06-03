@@ -1,471 +1,150 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <meta name="description" content="Pirate King of Movies - Catálogo de filmes e séries com legendas em português.">
+  <meta name="description" content="Pirate King of Movies - Catalogo de filmes e series com legendas em portugues.">
   <meta name="theme-color" content="#6a1b9a">
-  <meta property="og:title" content="🎬 Pirate King of Movies">
-  <meta property="og:description" content="Catálogo de filmes e séries com legendas em português">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
-=======
-
-  <style>
-    @layer reset, base, layout, components, utilities, overrides;
-  </style>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
-
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components/navbar.css">
-<<<<<<< HEAD
-=======
   <link rel="stylesheet" href="css/components/btn.css">
   <link rel="stylesheet" href="css/components/hero.css">
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
-  <link rel="stylesheet" href="css/components/btn.css">
   <link rel="stylesheet" href="css/utilities.css">
-<<<<<<< HEAD
-  <title>🎬 Pirate King of Movies - Filmes e Séries Online</title>
-=======
-
-  <title>Pirate King of Movies</title>
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
+  <title>Pirate King of Movies - Filmes e Series Online</title>
 </head>
 <body>
-<<<<<<< HEAD
-  <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
-  <header class="navbar" role="banner">
+  <a href="#main-content" class="skip-link">Pular para conteudo principal</a>
+  <header class="navbar">
     <div class="navbar__container">
-      <a href="index.html" class="navbar__logo" aria-label="Pirate King of Movies - Home">🎬 Pirate King</a>
-      <button class="navbar__toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navbar-menu">☰</button>
-      <nav class="navbar__menu" id="navbar-menu" role="navigation" aria-label="Navegação principal">
+      <div class="navbar__top">
+        <a href="index.html" class="navbar__logo">Pirate King</a>
+        <button class="navbar__toggle" type="button" aria-label="Abrir menu" aria-expanded="false">â˜°</button>
+      </div>
+      <nav class="navbar__menu" aria-label="Menu principal">
         <ul class="navbar__list">
           <li><a href="index.html" class="navbar__link active">Home</a></li>
           <li><a href="#filmes" class="navbar__link">Filmes</a></li>
-          <li><a href="#series" class="navbar__link">Séries</a></li>
+          <li><a href="#series" class="navbar__link">Series</a></li>
           <li><a href="cadastro.html" class="navbar__link">Cadastro</a></li>
+          <li><a href="login.html" class="navbar__link" data-auth-link>Login</a></li>
         </ul>
       </nav>
-      <div class="navbar__search">
-        <label for="search-input" class="sr-only">Buscar filmes e séries</label>
-        <input type="search" id="search-input" class="search-input" placeholder="Buscar filmes..." aria-label="Buscar filmes e séries">
-      </div>
+      <form class="navbar__search" role="search">
+        <label for="search-input" class="sr-only">Buscar filmes e series</label>
+        <input type="search" id="search-input" placeholder="Buscar filmes ou series">
+      </form>
     </div>
   </header>
   <main id="main-content" class="layout">
-    <section id="filmes" aria-label="Filmes">
-      <h2>🎬 Filmes</h2>
-      <div class="cards-grid" role="list">
-        <article class="card" role="listitem">
-          <img src="media/img/batman.jpg" alt="Pôster do filme Batman" class="card__image" loading="lazy">
-          <h3 class="card__title">Batman</h3>
-          <p class="card__text">Bilionário de Gotham combate o crime usando tecnologia, inteligência e treinamento.</p>
-          <a href="batman.html" class="btn btn--primary">Ver mais</a>
-        </article>
-        <article class="card" role="listitem">
-          <img src="media/img/superman.jpg" alt="Pôster do filme Superman" class="card__image" loading="lazy">
-          <h3 class="card__title">Superman</h3>
-          <p class="card__text">Herói vindo do planeta Krypton protege a Terra usando seus incríveis poderes.</p>
-          <a href="superman.html" class="btn btn--primary">Ver mais</a>
-        </article>
-        <article class="card" role="listitem">
-          <img src="media/img/flash.jpg" alt="Pôster do filme Flash" class="card__image" loading="lazy">
-          <h3 class="card__title">Flash</h3>
-          <p class="card__text">Após um acidente, Barry Allen ganha super velocidade e se torna o herói Flash.</p>
-          <a href="flash.html" class="btn btn--primary">Ver mais</a>
-        </article>
-        <article class="card" role="listitem">
-          <img src="media/img/homem-aranha.jpg" alt="Pôster do filme Homem-Aranha" class="card__image" loading="lazy">
-          <h3 class="card__title">Homem-Aranha</h3>
-          <p class="card__text">Um jovem com poderes de aranha combate o crime e protege sua cidade.</p>
-          <a href="homem-aranha.html" class="btn btn--primary">Ver mais</a>
-        </article>
-      </div>
-    </section>
-    <section id="series" aria-label="Séries">
-      <h2>📺 Séries</h2>
-      <div class="cards-grid" role="list">
-        <article class="card" role="listitem">
-          <img src="media/img/supernatural.jpg" alt="Pôster da série Supernatural" class="card__image" loading="lazy">
-          <h3 class="card__title">Supernatural</h3>
-          <p class="card__text">Dois irmãos viajam pelos Estados Unidos caçando demônios, fantasmas e criaturas sobrenaturais.</p>
-          <a href="supernatural.html" class="btn btn--primary">Ver mais</a>
-        </article>
-        <article class="card" role="listitem">
-          <img src="media/img/got.jpg" alt="Pôster da série Game of Thrones" class="card__image" loading="lazy">
-          <h3 class="card__title">Game of Thrones</h3>
-          <p class="card__text">Diversas famílias nobres lutam pelo controle do Trono de Ferro em Westeros.</p>
-          <a href="got.html" class="btn btn--primary">Ver mais</a>
-        </article>
-        <article class="card" role="listitem">
-          <img src="media/img/modern-family.jpg" alt="Pôster da série Modern Family" class="card__image" loading="lazy">
-          <h3 class="card__title">Modern Family</h3>
-          <p class="card__text">Série de comédia que mostra o dia a dia de diferentes famílias de forma divertida.</p>
-          <a href="modern-family.html" class="btn btn--primary">Ver mais</a>
-        </article>
-        <article class="card" role="listitem">
-          <img src="media/img/lucifer.jpg" alt="Pôster da série Lucifer" class="card__image" loading="lazy">
-          <h3 class="card__title">Lucifer</h3>
-          <p class="card__text">O diabo decide tirar férias do inferno e passa a viver em Los Angeles ajudando a polícia.</p>
-          <a href="lucifer.html" class="btn btn--primary">Ver mais</a>
-        </article>
-      </div>
-    </section>
-    <aside class="sidebar" role="complementary" aria-label="Categorias">
+    <div>
+      <section id="filmes" aria-label="Filmes">
+        <h2>Filmes</h2>
+        <div class="cards-grid" role="list">
+          <article class="card" role="listitem" data-card-link="batman.html" tabindex="0" aria-label="Abrir detalhes de Batman">
+            <img src="media/img/batman.jpg" alt="Poster do filme Batman" class="card__image" loading="lazy">
+            <h3 class="card__title">Batman</h3>
+            <p class="card__text">Bilionario de Gotham combate o crime usando tecnologia, inteligencia e treinamento.</p>
+            <a href="batman.html" class="btn btn--primary">Ver mais</a>
+          </article>
+          <article class="card" role="listitem" data-card-link="superman.html" tabindex="0" aria-label="Abrir detalhes de Superman">
+            <img src="media/img/superman.jpg" alt="Poster do filme Superman" class="card__image" loading="lazy">
+            <h3 class="card__title">Superman</h3>
+            <p class="card__text">Heroi vindo do planeta Krypton protege a Terra usando seus incriveis poderes.</p>
+            <a href="superman.html" class="btn btn--primary">Ver mais</a>
+          </article>
+          <article class="card" role="listitem" data-card-link="flash.html" tabindex="0" aria-label="Abrir detalhes de Flash">
+            <img src="media/img/flash.jpg" alt="Poster do filme Flash" class="card__image" loading="lazy">
+            <h3 class="card__title">Flash</h3>
+            <p class="card__text">Apos um acidente, Barry Allen ganha super velocidade e se torna o heroi Flash.</p>
+            <a href="flash.html" class="btn btn--primary">Ver mais</a>
+          </article>
+          <article class="card" role="listitem" data-card-link="homem-aranha.html" tabindex="0" aria-label="Abrir detalhes de Homem-Aranha">
+            <img src="media/img/homem-aranha.jpg" alt="Poster do filme Homem-Aranha" class="card__image" loading="lazy">
+            <h3 class="card__title">Homem-Aranha</h3>
+            <p class="card__text">Um jovem com poderes de aranha combate o crime e protege sua cidade.</p>
+            <a href="homem-aranha.html" class="btn btn--primary">Ver mais</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="series" aria-label="Series">
+        <h2>Series</h2>
+        <div class="cards-grid" role="list">
+          <article class="card" role="listitem" data-card-link="supernatural.html" tabindex="0" aria-label="Abrir detalhes de Supernatural">
+            <img src="media/img/supernatural.jpg" alt="Poster da serie Supernatural" class="card__image" loading="lazy">
+            <h3 class="card__title">Supernatural</h3>
+            <p class="card__text">Dois irmaos viajam pelos Estados Unidos cacando demonios, fantasmas e criaturas sobrenaturais.</p>
+            <a href="supernatural.html" class="btn btn--primary">Ver mais</a>
+          </article>
+          <article class="card" role="listitem" data-card-link="got.html" tabindex="0" aria-label="Abrir detalhes de Game of Thrones">
+            <img src="media/img/got.jpg" alt="Poster da serie Game of Thrones" class="card__image" loading="lazy">
+            <h3 class="card__title">Game of Thrones</h3>
+            <p class="card__text">Diversas familias nobres lutam pelo controle do Trono de Ferro em Westeros.</p>
+            <a href="got.html" class="btn btn--primary">Ver mais</a>
+          </article>
+          <article class="card" role="listitem" data-card-link="modern-family.html" tabindex="0" aria-label="Abrir detalhes de Modern Family">
+            <img src="media/img/modern-family.jpg" alt="Poster da serie Modern Family" class="card__image" loading="lazy">
+            <h3 class="card__title">Modern Family</h3>
+            <p class="card__text">Serie de comedia que mostra o dia a dia de diferentes familias de forma divertida.</p>
+            <a href="modern-family.html" class="btn btn--primary">Ver mais</a>
+          </article>
+          <article class="card" role="listitem" data-card-link="lucifer.html" tabindex="0" aria-label="Abrir detalhes de Lucifer">
+            <img src="media/img/lucifer.jpg" alt="Poster da serie Lucifer" class="card__image" loading="lazy">
+            <h3 class="card__title">Lucifer</h3>
+            <p class="card__text">O diabo decide tirar ferias do inferno e passa a viver em Los Angeles ajudando a policia.</p>
+            <a href="lucifer.html" class="btn btn--primary">Ver mais</a>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <aside class="sidebar" aria-label="Categorias">
       <h3>Categorias</h3>
-      <nav aria-label="Categorias de filmes">
-        <ul>
-          <li><a href="#acao">Ação</a></li>
-          <li><a href="#aventura">Aventura</a></li>
-          <li><a href="#ficcao-cientifica">Ficção científica</a></li>
-          <li><a href="#drama">Drama</a></li>
-          <li><a href="#comedia">Comédia</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="#filmes">Acao</a></li>
+        <li><a href="#filmes">Aventura</a></li>
+        <li><a href="#filmes">Ficcao cientifica</a></li>
+        <li><a href="#series">Drama</a></li>
+        <li><a href="#series">Comedia</a></li>
+      </ul>
     </aside>
   </main>
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="footer__grid">
-      <div class="footer__section">
-        <h3 class="footer__title">Sobre</h3>
-        <p>🎬 Pirate King of Movies - Sua plataforma de filmes e séries favoritas com legendas em português.</p>
+      <div>
+        <h3 class="footer__title">Pirate King of Movies</h3>
+        <p>Plataforma de filmes e series com videos e legendas em portugues.</p>
       </div>
-      <div class="footer__section">
-        <h3 class="footer__title">Links Rápidos</h3>
+      <div>
+        <h3 class="footer__title">Links rapidos</h3>
         <ul class="footer__list">
           <li><a href="index.html" class="footer__link">Home</a></li>
-          <li><a href="#filmes" class="footer__link">Filmes</a></li>
-          <li><a href="#series" class="footer__link">Séries</a></li>
+          <li><a href="index.html#filmes" class="footer__link">Filmes</a></li>
+          <li><a href="index.html#series" class="footer__link">Series</a></li>
           <li><a href="cadastro.html" class="footer__link">Cadastro</a></li>
+          <li><a href="login.html" class="footer__link" data-auth-link>Login</a></li>
         </ul>
       </div>
-      <div class="footer__section">
+      <div>
         <h3 class="footer__title">Contato</h3>
-        <p>Email: <a href="mailto:contato@piratekingofmovies.com">contato@piratekingofmovies.com</a></p>
-        <p>Suporte: <a href="tel:+5511999999999">(11) 9999-9999</a></p>
+        <p>contato@piratekingofmovies.com</p>
+        <p>(11) 9999-9999</p>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p class="footer__copyright">&copy; <span id="year"></span> Pirate King of Movies. Todos os direitos reservados.</p>
-    </div>
+    <p class="footer__copy">&copy; <span data-current-year>2026</span> Pirate King of Movies. Todos os direitos reservados.</p>
   </footer>
   <script src="js/main.js" defer></script>
-=======
-  <header class="navbar">
-    <div class="navbar__container">
-
-      <a href="index.html" class="navbar__logo">
-        Pirate King of Movies
-      </a>
-
-      <button 
-        class="navbar__toggle" 
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
-
-      <nav class="navbar__menu" aria-label="Menu principal">
-        <ul class="navbar__list">
-
-          <li class="navbar__item">
-            <a class="navbar__link" href="#filmes">Filmes</a>
-          </li>
-
-          <li class="navbar__item">
-            <a class="navbar__link" href="#series">Séries</a>
-          </li>
-
-          <li class="navbar__item">
-            <a class="navbar__link" href="#noticias">Notícias</a>
-          </li>
-
-          <li class="navbar__item">
-            <a class="navbar__link" href="cadastro.html">Cadastro</a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <form class="navbar__search">
-        <label class="u-sr-only" for="busca">Buscar</label>
-
-        <input 
-          type="text"
-          id="busca"
-          name="busca"
-          placeholder="Buscar filme ou série"
-        >
-
-        <button class="btn" type="submit">
-          Pesquisar
-        </button>
-      </form>
-
-    </div>
-  </header>
-
-  
-  <div class="layout">
-    <main>      
-      <section id="filmes">
-        <h2>Filmes</h2>
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/homem-aranha.jpg"
-            alt="Imagem do Homem-Aranha"
-          >
-          <h3 class="card__title">
-            <a href="homem-aranha.html">Homem-Aranha</a>
-          </h3>
-          <p class="card__text">
-            Um jovem ganha poderes de aranha e passa a combater o crime na cidade de Nova York.
-          </p>
-          <a class="btn" href="homem-aranha.html">
-            Ver mais
-          </a>
-        </article>
-
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/batman.jpg"
-            alt="Imagem do Batman"
-          >
-          <h3 class="card__title">
-            <a href="batman.html">Batman</a>
-          </h3>
-          <p class="card__text">
-            Bilionário de Gotham combate o crime usando tecnologia, inteligência e treinamento.
-          </p>
-          <a class="btn" href="batman.html">
-            Ver mais
-          </a>
-        </article>
-
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/superman.jpg"
-            alt="Imagem do Superman"
-          >
-          <h3 class="card__title">
-            <a href="superman.html">Superman</a>
-          </h3>
-          <p class="card__text">
-            Herói vindo do planeta Krypton protege a Terra usando seus incríveis poderes.
-          </p>
-          <a class="btn" href="superman.html">
-            Ver mais
-          </a>
-        </article>
-
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/flash.jpg"
-            alt="Imagem do Flash"
-          >
-          <h3 class="card__title">
-            <a href="flash.html">Flash</a>
-          </h3>
-          <p class="card__text">
-            Após um acidente, Barry Allen ganha super velocidade e se torna o herói Flash.
-          </p>
-          <a class="btn" href="flash.html">
-            Ver mais
-          </a>
-        </article>
-
-      </section>
-
-      <section id="series">
-        <h2>Séries</h2>
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/supernatural.jpg"
-            alt="Imagem da série Supernatural"
-          >
-          <h3 class="card__title">
-            <a href="supernatural.html">Supernatural</a>
-          </h3>
-          <p class="card__text">
-            Dois irmãos viajam pelos Estados Unidos caçando demônios, fantasmas e criaturas sobrenaturais.
-          </p>
-          <a class="btn" href="supernatural.html">
-            Ver mais
-          </a>
-        </article>
-
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/got.jpg"
-            alt="Imagem da série Game of Thrones"
-          >
-          <h3 class="card__title">
-            <a href="got.html">Game of Thrones</a>
-          </h3>
-          <p class="card__text">
-            Diversas famílias nobres lutam pelo controle do Trono de Ferro em Westeros.
-          </p>
-          <a class="btn" href="got.html">
-            Ver mais
-          </a>
-        </article>
-
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/modern-family.jpg"
-            alt="Imagem da série Modern Family"
-          >
-          <h3 class="card__title">
-            <a href="modern-family.html">Modern Family</a>
-          </h3>
-          <p class="card__text">
-            Série de comédia que mostra o dia a dia de diferentes famílias de forma divertida.
-          </p>
-          <a class="btn" href="modern-family.html">
-            Ver mais
-          </a>
-        </article>
-
-        <article class="card">
-          <img 
-            class="card__image"
-            src="media/img/lucifer.jpg"
-            alt="Imagem da série Lucifer"
-          >
-          <h3 class="card__title">
-            <a href="lucifer.html">Lucifer</a>
-          </h3>
-          <p class="card__text">
-            O diabo decide tirar férias do inferno e passa a viver em Los Angeles ajudando a polícia.
-          </p>
-          <a class="btn" href="lucifer.html">
-            Ver mais
-          </a>
-        </article>
-
-      </section>
-
-      <section id="noticias">
-
-        <h2>Notícias de Cinema</h2>
-
-        <article class="card card--featured">
-
-          <h3 class="card__title">
-            Novo filme do Batman é anunciado
-          </h3>
-
-          <p class="card__text">
-            Produtora confirma que um novo filme do Batman está em desenvolvimento para os próximos anos.
-          </p>
-
-        </article>
-
-        <article class="card card--featured">
-
-          <h3 class="card__title">
-            Nova temporada de séries populares
-          </h3>
-
-          <p class="card__text">
-            Algumas das séries mais assistidas do momento terão novas temporadas confirmadas.
-          </p>
-
-        </article>
-
-      </section>
-
-    </main>
-
-    <aside class="sidebar">
-
-      <h3 class="sidebar__title">
-        Categorias
-      </h3>
-
-      <ul class="sidebar__list">
-
-        <li><a href="#">Ação</a></li>
-        <li><a href="#">Aventura</a></li>
-        <li><a href="#">Ficção científica</a></li>
-        <li><a href="#">Drama</a></li>
-        <li><a href="#">Comédia</a></li>
-
-      </ul>
-
-    </aside>
-
-  </div>
-
-  <footer class="footer">
-
-    <div class="footer__grid">
-
-      <div>
-        <h3 class="footer__title">
-          Pirate King of Movies
-        </h3>
-
-        <p>
-          Plataforma de filmes e séries.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="footer__title">
-          Navegação
-        </h3>
-
-        <ul class="footer__list">
-          <li><a href="#filmes">Filmes</a></li>
-          <li><a href="#series">Séries</a></li>
-          <li><a href="#noticias">Notícias</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="footer__title">
-          Contato
-        </h3>
-
-        <p>
-          contato@pirateking.com
-        </p>
-      </div>
-
-    </div>
-
-    <p class="footer__copy">
-      &copy; 2026 Pirate King of Movies. Todos os direitos reservados.
-    </p>
-
-  </footer>
-
-  <script src="js/main.js"></script>
-
->>>>>>> 060ad07949fb51fe2eff9d45d0859fe2ee7f1a7c
 </body>
 </html>
+
+
+
+

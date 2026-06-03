@@ -1,18 +1,3 @@
-/**
- * Pirate King of Movies - Main JavaScript
- * Versão: 1.0
- */
-
-// 
-// UTILIDADES
-// 
-
-function sanitizeHTML(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
-
 function getElement(selector) {
   try {
     return document.querySelector(selector);
@@ -22,172 +7,232 @@ function getElement(selector) {
   }
 }
 
-function onElementReady(selector, callback) {
-  const element = getElement(selector);
-  if (element && typeof callback === 'function') {
-    callback(element);
-  }
-}
-
-// 
-// NAVBAR - MENU MOBILE
-// 
-
 function initNavbarToggle() {
-  onElementReady('.navbar__toggle', (toggle) => {
-    const menu = getElement('.navbar__menu');
-    if (!menu) return;
+  const toggle = getElement('.navbar__toggle');
+  const menu = getElement('.navbar__menu');
 
-    toggle.addEventListener('click', () => {
-      try {
-        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-        const newState = !isExpanded;
-        toggle.setAttribute('aria-expanded', newState);
-        menu.classList.toggle('active', newState);
-      } catch (error) {
-        console.error('Erro ao alternar menu:', error);
-      }
-    });
+  if (!toggle || !menu) return;
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menu.classList.contains('active')) {
-        toggle.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('active');
-      }
-    });
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    menu.classList.toggle('active', !isOpen);
+  });
 
-    menu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        toggle.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('active');
-      });
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('active');
     });
   });
-}
 
-// 
-// NAVBAR - SCROLL EFFECT
-// 
-
-function initNavbarScrollEffect() {
-  onElementReady('.navbar', (navbar) => {
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (window.scrollY > 80) {
-            navbar.classList.add('navbar--scrolled');
-          } else {
-            navbar.classList.remove('navbar--scrolled');
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('active');
+    }
   });
 }
-
-// 
-// BUSCA
-// 
 
 function initSearch() {
-  onElementReady('#search-input', (searchInput) => {
-    const movies = [
-      { id: 1, title: 'Batman', url: 'batman.html' },
-      { id: 2, title: 'Superman', url: 'superman.html' },
-      { id: 3, title: 'Flash', url: 'flash.html' },
-      { id: 4, title: 'Homem-Aranha', url: 'homem-aranha.html' },
-      { id: 5, title: 'Supernatural', url: 'supernatural.html' },
-      { id: 6, title: 'Game of Thrones', url: 'got.html' },
-      { id: 7, title: 'Modern Family', url: 'modern-family.html' },
-      { id: 8, title: 'Lucifer', url: 'lucifer.html' },
-    ];
+  const searchInput = getElement('#search-input');
+  if (!searchInput) return;
 
-    searchInput.addEventListener('input', (e) => {
-      try {
-        const query = sanitizeHTML(e.target.value.toLowerCase().trim());
-        const cards = document.querySelectorAll('.card');
-        cards.forEach((card) => {
-          const title = card.querySelector('.card__title').textContent.toLowerCase();
-          if (title.includes(query) || query === '') {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      } catch (error) {
-        console.error('Erro na busca:', error);
-      }
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    document.querySelectorAll('.card').forEach((card) => {
+      const title = card.querySelector('.card__title')?.textContent.toLowerCase() || '';
+      const text = card.querySelector('.card__text')?.textContent.toLowerCase() || '';
+      card.hidden = query !== '' && !title.includes(query) && !text.includes(query);
     });
   });
 }
 
-// 
-// FOOTER - ANO ATUAL
-// 
+function openCard(card) {
+  const url = card.dataset.cardLink;
+  if (!url) return;
+
+  window.location.href = url;
+}
+
+function initClickableCards() {
+  document.querySelectorAll('[data-card-link]').forEach((card) => {
+    card.addEventListener('click', (event) => {
+      if (event.target.closest('a, button')) return;
+      openCard(card);
+    });
+
+    card.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      if (event.target.closest('a, button')) return;
+
+      event.preventDefault();
+      openCard(card);
+    });
+  });
+}
 
 function updateFooterYear() {
-  onElementReady('#year', (yearElement) => {
-    try {
-      yearElement.textContent = new Date().getFullYear();
-    } catch (error) {
-      console.error('Erro ao atualizar ano:', error);
-    }
+  document.querySelectorAll('[data-current-year]').forEach((element) => {
+    element.textContent = new Date().getFullYear();
   });
 }
-
-// 
-// NAVEGAÇÃO ATIVA
-// 
 
 function initActiveNavigation() {
-  const navLinks = document.querySelectorAll('.navbar__link');
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  navLinks.forEach((link) => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+
+  document.querySelectorAll('.navbar__link').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    const hrefPage = href.split('#')[0] || 'index.html';
+    link.classList.toggle('active', hrefPage === currentPage);
   });
 }
 
-// 
-// INICIALIZAÇÃO
-// 
+function getStoredUsers() {
+  return JSON.parse(localStorage.getItem('pirateKingUsers') || '[]');
+}
+
+function saveStoredUsers(users) {
+  localStorage.setItem('pirateKingUsers', JSON.stringify(users));
+}
+
+function getCurrentUser() {
+  return JSON.parse(localStorage.getItem('pirateKingSession') || 'null');
+}
+
+function showFormMessage(selector, message, type) {
+  const messageElement = getElement(selector);
+  if (!messageElement) return;
+
+  messageElement.textContent = message;
+  messageElement.className = `form__message form__message--${type}`;
+}
+
+function initRegistrationForm() {
+  const form = getElement('#cadastro-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = form.nome.value.trim();
+    const email = form.email.value.trim().toLowerCase();
+    const password = form.senha.value;
+    const passwordConfirmation = form.confirmaSenha.value;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      showFormMessage('#cadastro-mensagem', 'Preencha todos os campos corretamente.', 'error');
+      return;
+    }
+
+    if (password !== passwordConfirmation) {
+      showFormMessage('#cadastro-mensagem', 'As senhas precisam ser iguais.', 'error');
+      form.confirmaSenha.focus();
+      return;
+    }
+
+    const users = getStoredUsers();
+    const existingUser = users.find((user) => user.email === email);
+
+    if (existingUser?.password) {
+      showFormMessage('#cadastro-mensagem', 'Este email ja esta cadastrado.', 'error');
+      form.email.focus();
+      return;
+    }
+
+    if (existingUser) {
+      existingUser.name = name;
+      existingUser.password = password;
+      existingUser.updatedAt = new Date().toISOString();
+    } else {
+      users.push({
+        name,
+        email,
+        password,
+        createdAt: new Date().toISOString(),
+      });
+    }
+
+    saveStoredUsers(users);
+    showFormMessage('#cadastro-mensagem', 'Cadastro realizado com sucesso. Voce ja pode fazer login.', 'success');
+    form.reset();
+  });
+}
+
+function initLoginForm() {
+  const form = getElement('#login-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const email = form.email.value.trim().toLowerCase();
+    const password = form.senha.value;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      showFormMessage('#login-mensagem', 'Preencha email e senha corretamente.', 'error');
+      return;
+    }
+
+    const user = getStoredUsers().find((storedUser) => (
+      storedUser.email === email && storedUser.password === password
+    ));
+
+    if (!user) {
+      showFormMessage('#login-mensagem', 'Email ou senha incorretos.', 'error');
+      form.senha.focus();
+      return;
+    }
+
+    localStorage.setItem('pirateKingSession', JSON.stringify({
+      name: user.name,
+      email: user.email,
+      loggedAt: new Date().toISOString(),
+    }));
+
+    showFormMessage('#login-mensagem', `Bem-vindo, ${user.name}.`, 'success');
+    form.reset();
+
+    window.setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 700);
+  });
+}
+
+function initAuthNavigation() {
+  const currentUser = getCurrentUser();
+  const loginLinks = document.querySelectorAll('[data-auth-link]');
+
+  loginLinks.forEach((link) => {
+    if (!currentUser) return;
+
+    link.textContent = 'Sair';
+    link.href = '#sair';
+    link.title = `Logado como ${currentUser.name}`;
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      localStorage.removeItem('pirateKingSession');
+      window.location.href = 'login.html';
+    });
+  });
+}
 
 function init() {
-  try {
-    initNavbarToggle();
-    initNavbarScrollEffect();
-    initSearch();
-    updateFooterYear();
-    initActiveNavigation();
-  } catch (error) {
-    console.error('Erro na inicialização:', error);
-  }
+  initNavbarToggle();
+  initSearch();
+  initClickableCards();
+  updateFooterYear();
+  initActiveNavigation();
+  initRegistrationForm();
+  initLoginForm();
+  initAuthNavigation();
 }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
-const menuButton = document.querySelector(".navbar__toggle");
-const menu = document.querySelector(".navbar__menu");
-
-if (menuButton && menu) {
-
-    menuButton.addEventListener("click", function () {
-
-        menu.classList.toggle("active");
-
-        const isOpen = menu.classList.contains("active");
-
-        menuButton.setAttribute("aria-expanded", isOpen);
-
-    });
-
 }
