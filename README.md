@@ -4,7 +4,7 @@ Interface web estatica para catalogar filmes e series, exibir paginas individuai
 
 O projeto foi desenvolvido com HTML, CSS e JavaScript puros, com foco em organizacao de interface, navegacao clara, responsividade e boas praticas de estrutura de arquivos.
 
-
+---
 
 ## Sumario
 
