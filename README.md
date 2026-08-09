@@ -60,6 +60,7 @@ Criar uma experiencia web organizada para listar, pesquisar e acessar conteudos 
 
 ### Paginas principais
 
+
 - `index.html`: pagina inicial com catalogo, busca, cards e categorias.
 - `cadastro.html`: formulario de cadastro.
 - `login.html`: formulario de login.
