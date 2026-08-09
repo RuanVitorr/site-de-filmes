@@ -7,7 +7,7 @@ O projeto foi desenvolvido com HTML, CSS e JavaScript puros, com foco em organiz
 ---
 
 ## Sumario
-dhiogo
+[dhiogo](https://www.linkedin.com/in/ruan-vitorr/)
 
 - [Sobre o projeto](#sobre-o-projeto)
 - [Funcionalidades](#funcionalidades)
