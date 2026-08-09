@@ -1,4 +1,4 @@
-## Pirate King of Movies
+# Pirate King of Movies
 
 Interface web estatica para catalogar filmes e series, exibir paginas individuais com video e legenda, permitir busca no catalogo e demonstrar um fluxo simples de cadastro e login usando `localStorage`.
 
@@ -7,6 +7,7 @@ O projeto foi desenvolvido com HTML, CSS e JavaScript puros, com foco em organiz
 ---
 
 ## Sumario
+dhiogo
 
 - [Sobre o projeto](#sobre-o-projeto)
 - [Funcionalidades](#funcionalidades)
